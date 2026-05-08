@@ -52,17 +52,15 @@ const S={
 };
 
 // Componente de imagen con lazy loading
-function ProductImg({src,name,height=180,fontSize=52,onClick}){
+function ProductImg({src,name,height=180,onClick}){
   const [loaded,setLoaded]=useState(false);
-  if(src) return(
-    <div style={{width:"100%",height,background:lightBlue,position:"relative",overflow:"hidden"}} onClick={onClick}>
-      {!loaded&&<div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize}}}>🌿</div>}
-      <img src={src} alt={name} loading="lazy"
-        style={{width:"100%",height,objectFit:"cover",display:loaded?"block":"none"}}
-        onLoad={()=>setLoaded(true)}/>
+  if(!src) return <div style={{width:"100%",height,background:lightBlue,display:"flex",alignItems:"center",justifyContent:"center",fontSize:52,cursor:onClick?"pointer":"default"}} onClick={onClick}>🌿</div>;
+  return(
+    <div style={{width:"100%",height,background:lightBlue,position:"relative",overflow:"hidden",cursor:onClick?"pointer":"default"}} onClick={onClick}>
+      {!loaded&&<div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize:52}}>🌿</div>}
+      <img src={src} alt={name} loading="lazy" style={{width:"100%",height,objectFit:"cover",display:loaded?"block":"none"}} onLoad={()=>setLoaded(true)}/>
     </div>
   );
-  return <div style={{...S.cardImg,height,cursor:onClick?"pointer":"default"}} onClick={onClick}>{fontSize===52?"🌿":"🌿"}</div>;
 }
 
 export default function App(){
