@@ -208,14 +208,14 @@ export default function App(){
     </div>
   );
 
-  const Store=()=>(
+  const StoreContent=(
     <div style={S.section}>
       <div style={{marginBottom:24}}>
         <div style={S.sectionTitle}>Catálogo Punto Vital</div>
         <div style={S.sectionSub}>{filtered.length} productos · Stock inmediato</div>
       </div>
       <div style={S.filters}>
-        <input style={S.searchBox} placeholder="🔍 Buscar producto..." value={search} onChange={e=>setSearch(e.target.value)}/>
+        <input style={S.searchBox} placeholder="🔍 Buscar producto..." value={search} onChange={e=>setSearch(e.target.value)} autoFocus={page==="store"}/>
         {CATEGORIES.map(c=><button key={c} style={S.filterBtn(cat===c)} onClick={()=>setCat(c)}>{c}</button>)}
       </div>
       {filtered.length===0
@@ -457,7 +457,7 @@ export default function App(){
         </div>
       </nav>
       {page==="home"&&<Presentation/>}
-      {page==="store"&&<Store/>}
+      {page==="store"&&StoreContent}
       {page==="admin"&&(adminLogged?<AdminPanel/>:<AdminLogin/>)}
       {page!=="admin"&&(
         <div style={{background:dark,color:white,textAlign:"center",padding:"24px 20px"}}>
