@@ -54,11 +54,15 @@ const S={
 // Componente de imagen con lazy loading
 function ProductImg({src,name,height=180,onClick}){
   const [loaded,setLoaded]=useState(false);
-  if(!src) return <div style={{width:"100%",height,background:lightBlue,display:"flex",alignItems:"center",justifyContent:"center",fontSize:52,cursor:onClick?"pointer":"default"}} onClick={onClick}>🌿</div>;
+  const [error,setError]=useState(false);
+  if(!src||error) return <div style={{width:"100%",height,background:lightBlue,display:"flex",alignItems:"center",justifyContent:"center",fontSize:52,cursor:onClick?"pointer":"default"}} onClick={onClick}>🌿</div>;
   return(
-    <div style={{width:"100%",height,background:lightBlue,position:"relative",overflow:"hidden",cursor:onClick?"pointer":"default"}} onClick={onClick}>
+    <div style={{width:"100%",height,background:lightBlue,position:"relative",overflow:"hidden",cursor:onClick?"pointer":"default",display:"flex",alignItems:"center",justifyContent:"center"}} onClick={onClick}>
       {!loaded&&<div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize:52}}>🌿</div>}
-      <img src={src} alt={name} loading="lazy" style={{width:"100%",height,objectFit:"cover",display:loaded?"block":"none"}} onLoad={()=>setLoaded(true)}/>
+      <img src={src} alt={name}
+        style={{width:"100%",height:"100%",objectFit:"contain",padding:"8px",display:loaded?"block":"none",position:"absolute",inset:0}}
+        onLoad={()=>setLoaded(true)}
+        onError={()=>setError(true)}/>
     </div>
   );
 }
