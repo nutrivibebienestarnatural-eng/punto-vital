@@ -1,3 +1,4 @@
+// Lista de productos Punto Vital - Abril 2026
 export const PRODUCTS = [
   {id:1,name:"Aceite Esencial De Cúrcuma Labs Nutrition (30ml)",price:16500,cost:11785.71,desc:"Aceite esencial puro de cúrcuma. Uso tópico y aromático.",cat:"Aceites Esenciales",barcode:"0714604143901",img:"/aceite-curcuma.jpg"},
   {id:2,name:"Aceite Esencial De Orégano Labs Nutrition (30ml)",price:16500,cost:11785.71,desc:"Aceite esencial de orégano, propiedades antimicrobianas.",cat:"Aceites Esenciales",barcode:"0714604143871",img:"/aceite-oregano.jpg"},
@@ -135,4 +136,3 @@ export const KITS_ROTACION = [
 
 export const WHATSAPP = "5493571542025";
 export const ADMIN_PASS = "puntovital2025";
- 
