@@ -235,10 +235,11 @@ export default function App(){
                   <div style={p.isKit?S.kitTag:S.cardCat}>{p.cat}</div>
                   <div style={S.cardName}>{p.name}</div>
                   <div style={{fontSize:12,color:gray,lineHeight:1.4,marginBottom:8,display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical",overflow:"hidden"}}>{p.desc}</div>
-                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}}>
                     <div style={S.cardPrice}>{fmt(p.price)}</div>
                     <div style={{fontSize:11,color:"#2d5a27",fontWeight:600}}>✅ Stock</div>
                   </div>
+                  {p.pvp>0&&<div style={{fontSize:11,color:"#0071e3",fontWeight:600,marginBottom:6}}>Sugerido reventa: {fmt(p.pvp)}</div>}
                   <button style={S.cardBtn} onClick={()=>addCart(p)}>Agregar al carrito</button>
                 </div>
               </div>
@@ -324,7 +325,8 @@ export default function App(){
           <div style={{fontSize:22,fontWeight:700,letterSpacing:-.5,margin:"4px 0 8px"}}>{p.name}</div>
           <div style={{color:gray,fontSize:14,lineHeight:1.6,marginBottom:6}}>{p.desc}</div>
           {p.barcode&&<div style={{fontSize:11,color:gray,marginBottom:14,fontFamily:"monospace"}}>Código: {p.barcode}</div>}
-          <div style={{fontSize:28,fontWeight:800,color:blue,marginBottom:16}}>{fmt(p.price)}</div>
+          <div style={{fontSize:28,fontWeight:800,color:blue,marginBottom:4}}>{fmt(p.price)}</div>
+        {p.pvp>0&&<div style={{fontSize:13,color:"#0071e3",fontWeight:600,marginBottom:16}}>💡 Sugerido reventa: {fmt(p.pvp)} — Margen: {Math.round((p.pvp/p.price-1)*100)}%</div>}
           <button style={S.btn} onClick={()=>{addCart(p);setDetail(null);}}>Agregar al carrito</button>
         </div>
       </div>
@@ -448,19 +450,9 @@ export default function App(){
 
   return(
     <div style={S.app}>
-      <div style={S.banner}>⚡ <b>Envío mismo día</b> en pedidos antes de las 13 hs · 📦 Día siguiente después de las 13 hs · ✅ <b>Stock inmediato</b></div>
+      <div style={S.banner}>⚡ <b>Envío mismo día</b> en pedidos antes de las 13 hs · 🚚 <b>Envío GRATIS</b> en pedidos desde $150.000 · ✅ <b>Stock inmediato</b></div>
       <nav style={S.nav}>
-        <div style={S.logo} onClick={()=>setPage("home")}>
-          <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Icon - figura humana/planta */}
-            <circle cx="12" cy="4" r="3" fill={dark}/>
-            <path d="M8 14 Q12 8 16 14" stroke={dark} strokeWidth="2" strokeLinecap="round" fill="none"/>
-            <path d="M6 22 Q8 16 12 14 Q16 16 18 22" stroke={dark} strokeWidth="2" strokeLinecap="round" fill="none"/>
-            <line x1="12" y1="14" x2="12" y2="32" stroke={dark} strokeWidth="2" strokeLinecap="round"/>
-            {/* Text PUNTO VITAL */}
-            <text x="26" y="26" fontFamily="-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif" fontSize="16" fontWeight="600" letterSpacing="2" fill={dark}>PUNTO VITAL</text>
-          </svg>
-        </div>
+        <div style={S.logo} onClick={()=>setPage("home")}>Punto Vital</div>
         <div style={S.navLinks}>
           <button style={S.navLink(page==="home")} onClick={()=>setPage("home")}>Inicio</button>
           <button style={S.navLink(page==="store")} onClick={()=>setPage("store")}>Catálogo</button>
