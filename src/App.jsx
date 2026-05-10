@@ -65,7 +65,7 @@ function ProductImg({src,name,height=180,onClick}){
 
 export default function App(){
   const [page,setPage]=useState("home");
-  const [products,setProducts]=useState(PRODUCTS);
+  const [products,setProducts]=useState(()=>[...PRODUCTS]);
   const [cart,setCart]=useState([]);
   const [orders,setOrders]=useState([]);
   const [cartOpen,setCartOpen]=useState(false);
