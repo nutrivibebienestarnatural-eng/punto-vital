@@ -135,3 +135,4 @@ export const KITS_ROTACION = [
 
 export const WHATSAPP = "5493571542025";
 export const ADMIN_PASS = "puntovital2025";
+ 
