@@ -136,7 +136,7 @@ export default function App(){
     <div>
       <div style={S.hero}>
         <div style={S.heroEye}>Distribuidora Nutracéutica</div>
-        <h1 style={S.heroTitle}>Punto <span style={S.heroBlue}>Vital</span></h1>
+        <h1 style={S.heroTitle}>PUNTO <span style={S.heroBlue}>VITAL</span></h1>
         <p style={S.heroSub}>Acompañamos el crecimiento de profesionales, emprendedores y negocios con suplementos de alta calidad y stock inmediato.</p>
         <button style={S.heroBtn} onClick={()=>setPage("store")}>Ver catálogo completo</button>
         <button style={S.heroBtnOut} onClick={()=>document.getElementById("kits")?.scrollIntoView({behavior:"smooth"})}>Kits de alta rotación ↓</button>
@@ -450,7 +450,17 @@ export default function App(){
     <div style={S.app}>
       <div style={S.banner}>⚡ <b>Envío mismo día</b> en pedidos antes de las 13 hs · 📦 Día siguiente después de las 13 hs · ✅ <b>Stock inmediato</b></div>
       <nav style={S.nav}>
-        <div style={S.logo} onClick={()=>setPage("home")}><span style={{color:blue,fontSize:22}}>●</span> Punto Vital</div>
+        <div style={S.logo} onClick={()=>setPage("home")}>
+          <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Icon - figura humana/planta */}
+            <circle cx="12" cy="4" r="3" fill={dark}/>
+            <path d="M8 14 Q12 8 16 14" stroke={dark} strokeWidth="2" strokeLinecap="round" fill="none"/>
+            <path d="M6 22 Q8 16 12 14 Q16 16 18 22" stroke={dark} strokeWidth="2" strokeLinecap="round" fill="none"/>
+            <line x1="12" y1="14" x2="12" y2="32" stroke={dark} strokeWidth="2" strokeLinecap="round"/>
+            {/* Text PUNTO VITAL */}
+            <text x="26" y="26" fontFamily="-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif" fontSize="16" fontWeight="600" letterSpacing="2" fill={dark}>PUNTO VITAL</text>
+          </svg>
+        </div>
         <div style={S.navLinks}>
           <button style={S.navLink(page==="home")} onClick={()=>setPage("home")}>Inicio</button>
           <button style={S.navLink(page==="store")} onClick={()=>setPage("store")}>Catálogo</button>
@@ -465,7 +475,7 @@ export default function App(){
       {page==="admin"&&(adminLogged?<AdminPanel/>:<AdminLogin/>)}
       {page!=="admin"&&(
         <div style={{background:dark,color:white,textAlign:"center",padding:"24px 20px"}}>
-          <div style={{fontWeight:700,fontSize:15,marginBottom:4}}>● Punto Vital</div>
+          <div style={{fontWeight:600,fontSize:15,marginBottom:4,letterSpacing:2}}>PUNTO VITAL</div>
           <div style={{opacity:.5,fontSize:12}}>Distribuidora de Alimentos Nutracéuticos · Argentina</div>
         </div>
       )}
