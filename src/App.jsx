@@ -4,26 +4,26 @@ const WHATSAPP = "5493541000000";
 const ADMIN_PASS = "puntovital2024";
 
 const PRODUCTS = [
-  {id:1,name:"Aceite Esencial De Cúrcuma (30ml)",price:16390,cost:12323.31,desc:"Aceite esencial puro de cúrcuma.",cat:"Aceites Esenciales",barcode:"0714604143901",img:"/fotos/aceite-curcuma.jpg",stock:false},
-  {id:2,name:"Aceite Esencial De Orégano (30ml)",price:16390,cost:12323.31,desc:"Aceite esencial de orégano, propiedades antimicrobianas.",cat:"Aceites Esenciales",barcode:"0714604143871",img:"/fotos/aceite-oregano.jpg",stock:false},
-  {id:3,name:"Aceite Esencial De Romero Capilar (30ml)",price:15950,cost:11992.48,desc:"Estimula el cuero cabelludo y fortalece el cabello.",cat:"Aceites Esenciales",barcode:"0714604143888",img:"/fotos/aceite-romero.jpg",stock:false},
-  {id:4,name:"Aceite Esencial De Tomillo Tonificante (30ml)",price:16390,cost:12323.31,desc:"Tonificante natural.",cat:"Aceites Esenciales",barcode:"0714604213192",img:"/fotos/aceite-tomillo.jpg",stock:false},
-  {id:5,name:"Aceite Esencial De Urucum (30ml)",price:15950,cost:11992.48,desc:"Aceite de urucum con propiedades antioxidantes.",cat:"Aceites Esenciales",barcode:"0714604143895",img:"/fotos/aceite-urucum.jpg",stock:false},
-  {id:6,name:"Ácido Alfa Lipoico 500mg (60 caps)",price:41250,cost:31015.04,desc:"Potente antioxidante universal. Protege células.",cat:"Antioxidantes",barcode:"0714604143789",img:"/fotos/alfa-lipoico.jpg",stock:true},
-  {id:7,name:"Ácido Fólico (60 caps)",price:18810,cost:14142.86,desc:"Vitamina B9 esencial. Embarazo, sistema nervioso.",cat:"Vitaminas",barcode:"0714604142911",img:"/fotos/acido-folico.jpg",stock:true},
-  {id:8,name:"Ácido Hialurónico (60 caps)",price:25190,cost:18939.85,desc:"Hidratación profunda de piel y articulaciones.",cat:"Antiage & Piel",barcode:"0714604142928",img:"/fotos/acido-hialuronico.jpg",stock:true},
-  {id:9,name:"Adrelax - Cortisol Support (60 caps)",price:29590,cost:22248.12,desc:"Soporte suprarrenal. Control del cortisol y estrés.",cat:"Estrés & Sueño",barcode:"0714604142935",img:"/fotos/adrelax.jpg",stock:true},
-  {id:10,name:"Adrelax - Cortisol Support (60 comp)",price:27390,cost:20593.98,desc:"Soporte suprarrenal. Control del cortisol y estrés.",cat:"Estrés & Sueño",barcode:"0714604213345",img:"/fotos/adrelax-comp.jpg",stock:true},
-  {id:11,name:"AKG - Ácido Alfa Ketoglutárico (60 caps)",price:38390,cost:28864.66,desc:"Longevidad celular. Metabolismo energético avanzado.",cat:"Longevidad",barcode:"0714604142942",img:"/fotos/akg.jpg",stock:true},
-  {id:12,name:"Ashwagandha 100% Pura (60 caps)",price:31460,cost:23654.14,desc:"Adaptógeno para estrés, insomnio y fatiga crónica.",cat:"Estrés & Sueño",barcode:"0714604213215",img:"/fotos/ashwagandha.jpg",stock:true},
-  {id:13,name:"Astaxantina 10mg (30 caps)",price:38390,cost:28864.66,desc:"Superantioxidante. Piel, ojos y articulaciones.",cat:"Antioxidantes",barcode:"0714604143734",img:"/fotos/astaxantina-12mg.jpg",stock:true},
-  {id:14,name:"Astaxantina 4mg",price:27390,cost:20593.98,desc:"Antioxidante carotenóide. Piel, ojos, articulaciones.",cat:"Antioxidantes",barcode:"0714604143864",img:"/fotos/astaxantina-4mg.jpg",stock:true},
-  {id:17,name:"BCAA Aminoácidos Esenciales 600mg (90 caps)",price:16390,cost:12323.31,desc:"Masa muscular y recuperación.",cat:"Deportivo",barcode:"0714604142966",img:"/fotos/bcaa.jpg",stock:true},
-  {id:146,name:"Beta Alanina (120 caps)",price:17050,cost:12819.55,desc:"Reduce la fatiga muscular y mejora el rendimiento.",cat:"Deportivo",barcode:"0714604213772",img:"/fotos/beta-alanina.jpg",stock:true},
-  {id:18,name:"Betacaroteno (60 caps)",price:17490,cost:13150.38,desc:"Provitamina A. Bronceado, piel y sistema inmune.",cat:"Vitaminas",barcode:"0714604142973",img:"/fotos/betacaroteno.jpg",stock:true},
-  {id:19,name:"Bio F - Hongo Cándida (60 caps)",price:20130,cost:15135.34,desc:"Fórmula antifúngica natural.",cat:"Salud Intestinal",barcode:"0714604142980",img:"/fotos/bio-f.jpg",stock:true},
-  {id:21,name:"Bisglicinato de Magnesio (60 comp)",price:17490,cost:13150.38,desc:"Magnesio quelatado. Sueño, músculos y nervios.",cat:"Magnesio",barcode:"0714604213390",img:"/fotos/bisglicinato-comp.jpg",stock:true},
-  {id:20,name:"Bisglicinato de Magnesio 500mg (60 caps)",price:19250,cost:14473.68,desc:"Magnesio de alta absorción. Relajación muscular.",cat:"Magnesio",barcode:"0714604142997",img:"/fotos/bisglicinato-comp.jpg",stock:true},
+  {id:1,name:"Aceite Esencial De Cúrcuma (30ml)",price:16390,cost:12323.31,desc:"Aceite esencial puro de cúrcuma.",cat:"Aceites Esenciales",barcode:"0714604143901",img:"/aceite-curcuma.jpg",stock:false},
+  {id:2,name:"Aceite Esencial De Orégano (30ml)",price:16390,cost:12323.31,desc:"Aceite esencial de orégano, propiedades antimicrobianas.",cat:"Aceites Esenciales",barcode:"0714604143871",img:"/aceite-oregano.jpg",stock:false},
+  {id:3,name:"Aceite Esencial De Romero Capilar (30ml)",price:15950,cost:11992.48,desc:"Estimula el cuero cabelludo y fortalece el cabello.",cat:"Aceites Esenciales",barcode:"0714604143888",img:"/aceite-romero.jpg",stock:false},
+  {id:4,name:"Aceite Esencial De Tomillo Tonificante (30ml)",price:16390,cost:12323.31,desc:"Tonificante natural.",cat:"Aceites Esenciales",barcode:"0714604213192",img:"/aceite-tomillo.jpg",stock:false},
+  {id:5,name:"Aceite Esencial De Urucum (30ml)",price:15950,cost:11992.48,desc:"Aceite de urucum con propiedades antioxidantes.",cat:"Aceites Esenciales",barcode:"0714604143895",img:"/aceite-urucum.jpg",stock:false},
+  {id:6,name:"Ácido Alfa Lipoico 500mg (60 caps)",price:41250,cost:31015.04,desc:"Potente antioxidante universal. Protege células.",cat:"Antioxidantes",barcode:"0714604143789",img:"/alfa-lipoico.jpg",stock:true},
+  {id:7,name:"Ácido Fólico (60 caps)",price:18810,cost:14142.86,desc:"Vitamina B9 esencial. Embarazo, sistema nervioso.",cat:"Vitaminas",barcode:"0714604142911",img:"/acido-folico.jpg",stock:true},
+  {id:8,name:"Ácido Hialurónico (60 caps)",price:25190,cost:18939.85,desc:"Hidratación profunda de piel y articulaciones.",cat:"Antiage & Piel",barcode:"0714604142928",img:"/acido-hialuronico.jpg",stock:true},
+  {id:9,name:"Adrelax - Cortisol Support (60 caps)",price:29590,cost:22248.12,desc:"Soporte suprarrenal. Control del cortisol y estrés.",cat:"Estrés & Sueño",barcode:"0714604142935",img:"/adrelax.jpg",stock:true},
+  {id:10,name:"Adrelax - Cortisol Support (60 comp)",price:27390,cost:20593.98,desc:"Soporte suprarrenal. Control del cortisol y estrés.",cat:"Estrés & Sueño",barcode:"0714604213345",img:"/adrelax-comp.jpg",stock:true},
+  {id:11,name:"AKG - Ácido Alfa Ketoglutárico (60 caps)",price:38390,cost:28864.66,desc:"Longevidad celular. Metabolismo energético avanzado.",cat:"Longevidad",barcode:"0714604142942",img:"/akg.jpg",stock:true},
+  {id:12,name:"Ashwagandha 100% Pura (60 caps)",price:31460,cost:23654.14,desc:"Adaptógeno para estrés, insomnio y fatiga crónica.",cat:"Estrés & Sueño",barcode:"0714604213215",img:"/ashwagandha.jpg",stock:true},
+  {id:13,name:"Astaxantina 10mg (30 caps)",price:38390,cost:28864.66,desc:"Superantioxidante. Piel, ojos y articulaciones.",cat:"Antioxidantes",barcode:"0714604143734",img:"/astaxantina-12mg.jpg",stock:true},
+  {id:14,name:"Astaxantina 4mg",price:27390,cost:20593.98,desc:"Antioxidante carotenóide. Piel, ojos, articulaciones.",cat:"Antioxidantes",barcode:"0714604143864",img:"/astaxantina-4mg.jpg",stock:true},
+  {id:17,name:"BCAA Aminoácidos Esenciales 600mg (90 caps)",price:16390,cost:12323.31,desc:"Masa muscular y recuperación.",cat:"Deportivo",barcode:"0714604142966",img:"/bcaa.jpg",stock:true},
+  {id:146,name:"Beta Alanina (120 caps)",price:17050,cost:12819.55,desc:"Reduce la fatiga muscular y mejora el rendimiento.",cat:"Deportivo",barcode:"0714604213772",img:"/beta-alanina.jpg",stock:true},
+  {id:18,name:"Betacaroteno (60 caps)",price:17490,cost:13150.38,desc:"Provitamina A. Bronceado, piel y sistema inmune.",cat:"Vitaminas",barcode:"0714604142973",img:"/betacaroteno.jpg",stock:true},
+  {id:19,name:"Bio F - Hongo Cándida (60 caps)",price:20130,cost:15135.34,desc:"Fórmula antifúngica natural.",cat:"Salud Intestinal",barcode:"0714604142980",img:"/bio-f.jpg",stock:true},
+  {id:21,name:"Bisglicinato de Magnesio (60 comp)",price:17490,cost:13150.38,desc:"Magnesio quelatado. Sueño, músculos y nervios.",cat:"Magnesio",barcode:"0714604213390",img:"/bisglicinato-comp.jpg",stock:true},
+  {id:20,name:"Bisglicinato de Magnesio 500mg (60 caps)",price:19250,cost:14473.68,desc:"Magnesio de alta absorción. Relajación muscular.",cat:"Magnesio",barcode:"0714604142997",img:"/bisglicinato-comp.jpg",stock:true},
   {id:32,name:"Blend Fusion (60 caps)",price:18260,cost:13729.32,desc:"Colágeno hidrolizado para piel, pelo y uñas.",cat:"Antiage & Piel",barcode:"0714604143109",img:"",stock:true},
   {id:24,name:"C Stop - Cándida Balance (60 caps)",price:27489,cost:20668.42,desc:"Balance de flora intestinal.",cat:"Salud Intestinal",barcode:"0714604143017",img:"",stock:true},
   {id:23,name:"Cafeína + Guaraná (60 caps)",price:15950,cost:11992.48,desc:"Concentración y energía natural sin nerviosismo.",cat:"Deportivo",barcode:"0714604213338",img:"",stock:true},
@@ -361,8 +361,16 @@ export default function App(){
                   <div style={p.isKit?S.kitTag:S.cardCat}>{p.cat}</div>
                   <div style={S.cardName}>{p.name}</div>
                   <div style={{fontSize:12,color:gray,lineHeight:1.4,marginBottom:8,display:"-webkit-box",WebkitLineClamp:2,WebkitBoxOrient:"vertical",overflow:"hidden"}}>{p.desc}</div>
-                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                    <div style={S.cardPrice}>{fmt(p.price)}</div>
+                  <div style={{marginBottom:6}}>
+                    <div style={{fontSize:11,color:"#6e6e73"}}>Precio mayorista</div>
+                    <div style={S.cardPrice}>{fmt(p.cost)}</div>
+                  </div>
+                  <div style={{marginBottom:8,background:"#f0fdf4",borderRadius:8,padding:"5px 8px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <div style={{fontSize:11,color:"#2d5a27",fontWeight:600}}>PVP sugerido</div>
+                    <div style={{fontSize:14,fontWeight:800,color:"#2d5a27"}}>{fmt(p.price)}</div>
+                  </div>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
+                    <div style={{fontSize:11,color:"#0071e3",fontWeight:600}}>Ganancia: {fmt(p.price-p.cost)}</div>
                     <div style={{fontSize:11,color:p.stock===false?"#ff3b30":"#2d5a27",fontWeight:600}}>{p.stock===false?"❌ Sin stock":"✅ Stock"}</div>
                   </div>
                   <button style={S.cardBtn(p.stock)} disabled={p.stock===false} onClick={()=>addCart(p)}>
