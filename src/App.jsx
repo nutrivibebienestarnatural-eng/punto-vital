@@ -170,7 +170,6 @@ export default function App(){
   const cartTotal=cart.reduce((s,i)=>s+i.price*i.qty,0);
 
   const filtered=useMemo(()=>{
-    setPagina(1);
     const q=search.toLowerCase().trim();
     return products.filter(p=>{
       const mc=CAT_MAP[p.cat]||p.cat;
@@ -338,9 +337,9 @@ export default function App(){
       <div style={{marginBottom:16}}>
         <div style={S.sectionTitle}>Catálogo Punto Vital</div>
         <div style={{color:gray,fontSize:14,marginBottom:12}}>{filtered.length} de {products.length} productos · Stock inmediato</div>
-        <input style={S.searchBox} placeholder="🔍 Buscar por nombre o código de barras..." value={search} onChange={e=>setSearch(e.target.value)}/>
+        <input style={S.searchBox} placeholder="🔍 Buscar por nombre o código de barras..." value={search} onChange={e=>{setSearch(e.target.value);setPagina(1);}}/>
         <div style={S.filters}>
-          {CATEGORIES.map(c=><button key={c} style={S.filterBtn(cat===c)} onClick={()=>setCat(c)}>{c}</button>)}
+          {CATEGORIES.map(c=><button key={c} style={S.filterBtn(cat===c)} onClick={()=>{setCat(c);setPagina(1);}}>{c}</button>)}
         </div>
       </div>
       {filtered.length===0
@@ -605,18 +604,18 @@ export default function App(){
           </button>}
         </div>
       </nav>
-      {page==="home"&&<Presentation/>}
-      {page==="store"&&<Store/>}
-      {page==="admin"&&(adminLogged?<AdminPanel/>:<AdminLogin/>)}
+      {page==="home"&&Presentation()}
+      {page==="store"&&Store()}
+      {page==="admin"&&(adminLogged?AdminPanel():AdminLogin())}
       {page!=="admin"&&(
         <div style={{background:dark,color:white,textAlign:"center",padding:"24px 20px"}}>
           <div style={{fontWeight:700,fontSize:15,marginBottom:4}}>● Punto Vital</div>
           <div style={{opacity:.5,fontSize:12}}>Distribuidora de Alimentos Nutracéuticos · Argentina</div>
         </div>
       )}
-      {cartOpen&&<Cart/>}
-      {checkoutOpen&&<Checkout/>}
-      {detail&&<Detail p={detail}/>}
+      {cartOpen&&Cart()}
+      {checkoutOpen&&Checkout()}
+      {detail&&Detail({p:detail})}
       {orderDone&&<div style={S.success}>✅ ¡Pedido confirmado y enviado por WhatsApp!</div>}
     </div>
   );
