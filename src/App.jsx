@@ -167,7 +167,7 @@ export default function App(){
   const editFileRef=useRef();
 
   const cartQty=cart.reduce((s,i)=>s+i.qty,0);
-  const cartTotal=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const cartTotal=cart.reduce((s,i)=>s+i.cost*i.qty,0);
 
   const filtered=useMemo(()=>{
     const q=search.toLowerCase().trim();
@@ -189,7 +189,7 @@ export default function App(){
     if(!form.name||!form.phone||!form.address)return;
     const o={id:Date.now(),items:cart,total:cartTotal,customer:form,status:"Pendiente",tracking:"",date:new Date().toLocaleString("es-AR")};
     setOrders(p=>[o,...p]);
-    const msg=encodeURIComponent(`🛒 *Nuevo pedido — Punto Vital*\n\n👤 *Cliente:* ${form.name}\n📞 ${form.phone}\n📍 ${form.address}${form.notes?`\n📝 ${form.notes}`:""}\n\n*Productos:*\n${cart.map(i=>`• ${i.name} x${i.qty} — ${fmt(i.price*i.qty)}`).join("\n")}\n\n💰 *Total: ${fmt(cartTotal)}*\n💳 Transferencia bancaria`);
+    const msg=encodeURIComponent(`🛒 *Nuevo pedido — Punto Vital*\n\n👤 *Cliente:* ${form.name}\n📞 ${form.phone}\n📍 ${form.address}${form.notes?`\n📝 ${form.notes}`:""}\n\n*Productos:*\n${cart.map(i=>`• ${i.name} x${i.qty} — ${fmt(i.cost*i.qty)}`).join("\n")}\n\n💰 *Total: ${fmt(cartTotal)}*\n💳 Transferencia bancaria`);
     window.open(`https://wa.me/${WHATSAPP}?text=${msg}`,"_blank");
     setCart([]);setCheckoutOpen(false);setCartOpen(false);setOrderDone(true);
     setForm({name:"",phone:"",address:"",notes:""});
